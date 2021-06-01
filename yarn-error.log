@@ -1,0 +1,83 @@
+Arguments: 
+  /home/alex/.nvm/versions/node/v12.21.0/bin/node /home/alex/.nvm/versions/node/v12.21.0/bin/yarn add jsbi
+
+PATH: 
+  /home/alex/.local/bin:/home/alex/.cargo/bin:/home/alex/.pyenv/plugins/pyenv-virtualenv/shims:/home/alex/.pyenv/shims:/home/alex/.pyenv/bin:/home/alex/.local/bin:/home/alex/.nvm/versions/node/v12.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/alexa/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/alexa/Documents/WindowsPowerShell/Modules/nvm/2.5.1/vs/v12.18.3:/mnt/c/Users/alexa/scoop/shims:/mnt/c/Users/alexa/OneDrive/?????????/WindowsPowerShell/Modules/nvm/2.5.1/vs/v12.18.3:/mnt/c/Users/alexa/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/alexa/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.21.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@ixs%2fsdk-core: Not found
+      at Request.params.callback [as _callback] (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1241:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "@ixs/v2-sdk",
+    "license": "MIT",
+    "version": "1.0.0",
+    "description": "🛠 An SDK for building applications on top of Ixs V2",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/IX-Swap/v2-sdk"
+    },
+    "keywords": [
+      "ixs",
+      "ethereum"
+    ],
+    "module": "dist/v2-sdk.esm.js",
+    "scripts": {
+      "lint": "tsdx lint src test",
+      "build": "tsdx build",
+      "start": "tsdx watch",
+      "test": "tsdx test",
+      "prepublishOnly": "tsdx build"
+    },
+    "dependencies": {
+      "@ethersproject/address": "^5.0.0",
+      "@ethersproject/solidity": "^5.0.0",
+      "@ixs/sdk-core": "1.x.x",
+      "tiny-invariant": "^1.1.0",
+      "tiny-warning": "^1.0.3"
+    },
+    "devDependencies": {
+      "@types/big.js": "^4.0.5",
+      "@types/jest": "^24.0.25",
+      "@ixs/v2-core": "1.x.x",
+      "tsdx": "^0.14.1"
+    },
+    "engines": {
+      "node": ">=10"
+    },
+    "prettier": {
+      "printWidth": 120,
+      "semi": false,
+      "singleQuote": true
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
