@@ -2,7 +2,7 @@ import { Pair } from './pair'
 import { Route } from './route'
 import { Trade } from './trade'
 import JSBI from 'jsbi'
-import { Ether, CurrencyAmount, Percent, Token, TradeType, WETH9, Price } from '@ixs/sdk-core'
+import { Ether, CurrencyAmount, Percent, Token, TradeType, WETH9, Price } from '@ixswap1/sdk-core'
 
 describe('Trade', () => {
   const ETHER = Ether.onChain(1)

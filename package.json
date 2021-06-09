@@ -1,5 +1,5 @@
 {
-  "name": "@ixs/v2-sdk",
+  "name": "@ixswap1/v2-sdk",
   "license": "MIT",
   "version": "1.0.0",
   "description": "🛠 An SDK for building applications on top of Ixs V2",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@ethersproject/address": "^5.0.0",
     "@ethersproject/solidity": "^5.0.0",
-    "@ixs/sdk-core": "1.x.x",
+    "@ixswap1/sdk-core": "1.x.x",
     "jsbi": "^3.1.4",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/big.js": "^4.0.5",
     "@types/jest": "^24.0.25",
-    "@ixs/v2-core": "1.x.x",
+    "@ixswap1/v2-core": "1.x.x",
     "tsdx": "^0.14.1"
   },
   "engines": {

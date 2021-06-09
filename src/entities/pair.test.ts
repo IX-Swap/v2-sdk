@@ -1,4 +1,4 @@
-import { Token, WETH9, Price, CurrencyAmount } from '@ixs/sdk-core'
+import { Token, WETH9, Price, CurrencyAmount } from '@ixswap1/sdk-core'
 import { InsufficientInputAmountError } from '../errors'
 import { computePairAddress, Pair } from './pair'
 

@@ -8,7 +8,7 @@ import {
   Price,
   sortedInsert,
   TradeType
-} from '@ixs/sdk-core'
+} from '@ixswap1/sdk-core'
 import { ONE, ZERO } from '../constants'
 import invariant from 'tiny-invariant'
 

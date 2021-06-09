@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@ixs%2fsdk-core: Not found
+  Error: https://registry.yarnpkg.com/@ixswap1%2fsdk-core: Not found
       at Request.params.callback [as _callback] (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/home/alex/.nvm/versions/node/v12.21.0/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (events.js:314:20)
@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@ixs/v2-sdk",
+    "name": "@ixswap1/v2-sdk",
     "license": "MIT",
     "version": "1.0.0",
     "description": "🛠 An SDK for building applications on top of Ixs V2",
@@ -56,14 +56,14 @@ npm manifest:
     "dependencies": {
       "@ethersproject/address": "^5.0.0",
       "@ethersproject/solidity": "^5.0.0",
-      "@ixs/sdk-core": "1.x.x",
+      "@ixswap1/sdk-core": "1.x.x",
       "tiny-invariant": "^1.1.0",
       "tiny-warning": "^1.0.3"
     },
     "devDependencies": {
       "@types/big.js": "^4.0.5",
       "@types/jest": "^24.0.25",
-      "@ixs/v2-core": "1.x.x",
+      "@ixswap1/v2-core": "1.x.x",
       "tsdx": "^0.14.1"
     },
     "engines": {

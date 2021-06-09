@@ -1,5 +1,5 @@
 import invariant from 'tiny-invariant'
-import { Currency, Price, Token } from '@ixs/sdk-core'
+import { Currency, Price, Token } from '@ixswap1/sdk-core'
 
 import { Pair } from './pair'
 

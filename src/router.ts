@@ -1,4 +1,4 @@
-import { Token, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from '@ixs/sdk-core'
+import { Token, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from '@ixswap1/sdk-core'
 import { Trade } from 'entities'
 import invariant from 'tiny-invariant'
 

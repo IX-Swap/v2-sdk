@@ -1,4 +1,4 @@
-import { Ether, Token, WETH9, CurrencyAmount } from '@ixs/sdk-core'
+import { Ether, Token, WETH9, CurrencyAmount } from '@ixswap1/sdk-core'
 import { Pair, Route } from './index'
 
 describe('Route', () => {
