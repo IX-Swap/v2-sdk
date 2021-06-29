@@ -3,6 +3,19 @@ import { Trade } from 'entities'
 import invariant from 'tiny-invariant'
 
 /**
+ * Authorization object for trading a SEC in a pair
+ */
+export interface TradeAuthorization {
+  operator: string;
+  deadline: string;
+  v: string;
+  r: string;
+  s: string;
+}
+
+export type TradeAuthorizationDigest = Array<TradeAuthorization>
+
+/**
  * Options for producing the arguments to send call to the router.
  */
 export interface TradeOptions {
@@ -25,6 +38,11 @@ export interface TradeOptions {
    * Whether any of the tokens in the path are fee on transfer tokens, which should be handled with special methods
    */
   feeOnTransfer?: boolean
+
+  /**
+   * Authorization digest for swapping on the SEC pools to be issued by an Operator (presumably from the backend)
+   */
+  authorizationDigest?: TradeAuthorizationDigest
 }
 
 export interface TradeOptionsDeadline extends Omit<TradeOptions, 'ttl'> {
@@ -46,7 +64,7 @@ export interface SwapParameters {
   /**
    * The arguments to pass to the method, all hex encoded.
    */
-  args: (string | string[])[]
+  args: Array<string | string[] | TradeAuthorizationDigest>
   /**
    * The amount of wei to send in hex.
    */
@@ -58,6 +76,13 @@ function toHex(currencyAmount: CurrencyAmount<Currency>) {
 }
 
 const ZERO_HEX = '0x0'
+const EMPTY_AUTHORIZATION: TradeAuthorization = {
+  operator: '0x0000000000000000000000000000000000000000',
+  deadline: '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+  v: '0x',
+  r: '0x0000000000000000000000000000000000000000000000000000000000000000',
+  s: '0x0000000000000000000000000000000000000000000000000000000000000000'
+}
 
 /**
  * Represents the Ixs V2 Router, and has static methods for helping execute trades.
@@ -94,7 +119,7 @@ export abstract class Router {
     const useFeeOnTransfer = Boolean(options.feeOnTransfer)
 
     let methodName: string
-    let args: (string | string[])[]
+    let args: (string | string[] | TradeAuthorizationDigest)[]
     let value: string
     switch (trade.tradeType) {
       case TradeType.EXACT_INPUT:
@@ -137,6 +162,18 @@ export abstract class Router {
         }
         break
     }
+
+    let authorizations = options.authorizationDigest
+
+    if (!authorizations || !Array.isArray(authorizations) || authorizations.length <= 0) {
+      authorizations = [EMPTY_AUTHORIZATION, EMPTY_AUTHORIZATION]
+    } else if (authorizations.length === 1) {
+      authorizations.push(EMPTY_AUTHORIZATION)
+    }
+
+    authorizations = authorizations.map(a => a ?? EMPTY_AUTHORIZATION)
+    args.push(authorizations)
+
     return {
       methodName,
       args,

@@ -1,10 +1,10 @@
 import JSBI from 'jsbi'
 import { Pair, Route, Trade } from './entities'
-import { Router } from './router'
+import { Router, TradeAuthorizationDigest } from './router'
 import invariant from 'tiny-invariant'
 import { CurrencyAmount, Percent, Ether, Token, WETH9 } from '@ixswap1/sdk-core'
 
-function checkDeadline(deadline: string[] | string): void {
+function checkDeadline(deadline: string[] | string | TradeAuthorizationDigest): void {
   expect(typeof deadline).toBe('string')
   invariant(typeof deadline === 'string')
   // less than 5 seconds on the deadline
@@ -37,13 +37,13 @@ describe('Router', () => {
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
         )
         expect(result.methodName).toEqual('swapExactETHForTokens')
-        expect(result.args.slice(0, -1)).toEqual([
+        expect(result.args.slice(0, -2)).toEqual([
           '0x51',
           [WETH9[1].address, token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
         expect(result.value).toEqual('0x64')
-        checkDeadline(result.args[result.args.length - 1])
+        checkDeadline(result.args[result.args.length - 2])
       })
 
       it('deadline specified', () => {
