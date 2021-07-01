@@ -34,10 +34,10 @@ jobs:
           restore-keys: |
             yarn-
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      # - name: Install dependencies
+      #   run: yarn install --frozen-lockfile
+      #   env:
+      #     NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-      - name: Run tests
-        run: yarn test
+      # - name: Run tests
+      #   run: yarn test
