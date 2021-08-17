@@ -1,10 +1,10 @@
 import JSBI from 'jsbi'
 
 // @TODO change it to IXS deploy...
-export const FACTORY_ADDRESS = '0xFD5978fc22F976bADDC80778Dc58a8e0f0F6dbb5'
+export const FACTORY_ADDRESS = '0x0b8bF935F597d3D7f43180eF40eb370d9EFf91A1'
 
 // init code hash, ref: periphery/contracts/libraries/IxsV2Library.sol#31
-export const INIT_CODE_HASH = '0x8d3fe634af820223f669a0f3909c78d55ce2f09b1ece8b308a52c6ea9e90ae40'
+export const INIT_CODE_HASH = '0x1e336e731fbd63ef3c94abb119c871141c9e1220f95928bbbf3d070b64c86fea'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

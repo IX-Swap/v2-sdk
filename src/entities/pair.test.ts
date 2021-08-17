@@ -12,7 +12,7 @@ describe('computePairAddress', () => {
       tokenB
     })
 
-    expect(result).toEqual('0xA7de3A3FaF3Feff900b848805B95A9825099391c')
+    expect(result).toEqual('0xC490B11c2C608355dAbCE57D7284F9b6e6f818a2')
   })
   it('should give same result regardless of token order', () => {
     const USDC = new Token(1, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 18, 'USDC', 'USD Coin')
@@ -51,7 +51,7 @@ describe('Pair', () => {
 
   describe('#getAddress', () => {
     it('returns the correct address', () => {
-      expect(Pair.getAddress(USDC, DAI)).toEqual('0x3643E8b184B3ddD0897428727e4DE1b6EADe07fD')
+      expect(Pair.getAddress(USDC, DAI)).toEqual('0xA5975A9cc841953828046de0fe41439AC4b31a13')
     })
   })
 
