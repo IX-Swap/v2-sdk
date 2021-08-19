@@ -1,7 +1,7 @@
 import JSBI from 'jsbi'
 
 // @TODO change it to IXS deploy...
-export const FACTORY_ADDRESS = '0x0b8bF935F597d3D7f43180eF40eb370d9EFf91A1'
+export const FACTORY_ADDRESS = '0x3a92A1ACe0b9b9b959da4ba61A2b9DA3d6Df1396'
 
 // init code hash, ref: periphery/contracts/libraries/IxsV2Library.sol#31
 export const INIT_CODE_HASH = '0x1e336e731fbd63ef3c94abb119c871141c9e1220f95928bbbf3d070b64c86fea'
