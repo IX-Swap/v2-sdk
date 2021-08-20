@@ -4,7 +4,7 @@ import JSBI from 'jsbi'
 export const FACTORY_ADDRESS = '0xF6438F59e072b7391de65d90EEBbf8529013BA65'
 
 // init code hash, ref: periphery/contracts/libraries/IxsV2Library.sol#31
-export const INIT_CODE_HASH = '0x1e336e731fbd63ef3c94abb119c871141c9e1220f95928bbbf3d070b64c86fea'
+export const INIT_CODE_HASH = '0xa64bd11dab3411d091d0fac96b09c548b22bcc3a39e44aeda3166ee8fa2ff0a0'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
