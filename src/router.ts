@@ -54,11 +54,11 @@ export interface TradeOptionsDeadline extends Omit<TradeOptions, 'ttl'> {
 }
 
 /**
- * The parameters to use in the call to the Ixs V2 Router to execute a trade.
+ * The parameters to use in the call to the IX Swap Router to execute a trade.
  */
 export interface SwapParameters {
   /**
-   * The method to call on the Ixs V2 Router.
+   * The method to call on the IX Swap Router.
    */
   methodName: string
   /**
@@ -85,7 +85,7 @@ const EMPTY_AUTHORIZATION: TradeAuthorization = {
 }
 
 /**
- * Represents the Ixs V2 Router, and has static methods for helping execute trades.
+ * Represents the IX Swap Router, and has static methods for helping execute trades.
  */
 export abstract class Router {
   /**
