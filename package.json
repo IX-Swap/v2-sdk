@@ -1,16 +1,19 @@
 {
-  "name": "@ixs/v2-sdk",
+  "name": "@ixswap1/v2-sdk",
   "license": "MIT",
-  "version": "3.0.0-alpha.2",
-  "description": "🛠 An SDK for building applications on top of Uniswap V2",
+  "version": "1.2.8",
+  "description": "🛠 An SDK for building applications on top of IX Swap",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Uniswap/uniswap-v2-sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IX-Swap/v2-sdk"
+  },
   "keywords": [
-    "uniswap",
+    "ixs",
     "ethereum"
   ],
   "module": "dist/v2-sdk.esm.js",
@@ -24,14 +27,15 @@
   "dependencies": {
     "@ethersproject/address": "^5.0.0",
     "@ethersproject/solidity": "^5.0.0",
-    "@uniswap/sdk-core": "^3.0.0-alpha.3",
+    "@ixswap1/sdk-core": "1.x.x",
+    "jsbi": "^3.1.4",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
   },
   "devDependencies": {
     "@types/big.js": "^4.0.5",
     "@types/jest": "^24.0.25",
-    "@uniswap/v2-core": "^1.0.1",
+    "@ixswap1/v2-core": "1.x.x",
     "tsdx": "^0.14.1"
   },
   "engines": {
