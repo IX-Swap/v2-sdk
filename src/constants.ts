@@ -1,5 +1,4 @@
 import JSBI from 'jsbi'
-// import { ChainId } from './enums/ChainId'
 import { AddressMap } from './types/AddressMap'
 
 
