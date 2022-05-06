@@ -18,13 +18,22 @@ export class Route<TInput extends Currency, TOutput extends Currency> {
     )
 
     const wrappedInput = input.wrapped
-    invariant(pairs[0].involvesToken(wrappedInput), 'INPUT')
-    invariant(typeof output === 'undefined' || pairs[pairs.length - 1].involvesToken(output.wrapped), 'OUTPUT')
+    invariant(
+      pairs[0].involvesToken(wrappedInput),
+      'INPUT'
+    )
+    invariant(
+      typeof output === 'undefined' || pairs[pairs.length - 1].involvesToken(output.wrapped), 
+      'OUTPUT'
+    )
 
     const path: Token[] = [wrappedInput]
     for (const [i, pair] of pairs.entries()) {
       const currentInput = path[i]
-      invariant(currentInput.equals(pair.token0) || currentInput.equals(pair.token1), 'PATH')
+      invariant(
+        currentInput.equals(pair.token0) || currentInput.equals(pair.token1), 
+        'PATH'
+      )
       const output = currentInput.equals(pair.token0) ? pair.token1 : pair.token0
       path.push(output)
     }

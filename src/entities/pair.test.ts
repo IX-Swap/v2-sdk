@@ -11,7 +11,6 @@ describe('computePairAddress', () => {
       tokenA,
       tokenB
     })
-
     expect(result).toEqual('0x472C6A4A699D3F28c463cEA866B6d36dcc013B31')
   })
   it('should give same result regardless of token order', () => {
@@ -32,7 +31,6 @@ describe('computePairAddress', () => {
       tokenA,
       tokenB
     })
-
     expect(resultA).toEqual(resultB)
   })
 })
@@ -51,7 +49,7 @@ describe('Pair', () => {
 
   describe('#getAddress', () => {
     it('returns the correct address', () => {
-      expect(Pair.getAddress(USDC, DAI)).toEqual('0xCdFd21409Fef8b38369005ddDb6f61A1274016c5')
+      expect(Pair.getAddress(USDC, DAI)).toEqual('0x472C6A4A699D3F28c463cEA866B6d36dcc013B31')
     })
   })
 
@@ -267,7 +265,6 @@ describe('Pair', () => {
       const tokenA = new Token(3, '0x0000000000000000000000000000000000000001', 18)
       const tokenB = new Token(3, '0x0000000000000000000000000000000000000002', 18)
       const pair = new Pair(CurrencyAmount.fromRawAmount(tokenA, '1000'), CurrencyAmount.fromRawAmount(tokenB, '1000'))
-
       const liquidityValue = pair.getLiquidityValue(
         tokenA,
         CurrencyAmount.fromRawAmount(pair.liquidityToken, '500'),
