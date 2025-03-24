@@ -1,7 +1,7 @@
 {
   "name": "@ixswap1/v2-sdk",
   "license": "MIT",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "description": "🛠 An SDK for building applications on top of IX Swap",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
