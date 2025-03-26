@@ -16,6 +16,7 @@ export const FACTORY_ADDRESS: AddressMap = {
 // init code hash, ref: periphery/contracts/libraries/IxsV2Library.sol#31
 export const INIT_CODE_HASH = '0x972504bfd3259d3d8e5fc9fed5ec2ea5a969144c60dc7b3c0fd7091f7f40f435'
 export const NEW_INIT_CODE_HASH = '0x68fc96abe1f9bdcc7a94b4c21b85f09e490c16b2d8160956269fb24dfb3eef64'
+export const REDBELLY_INIT_CODE_HASH = '0x0c05bbe629be65556aad21aa1da0609d3bd6216e4c1d84a360a0d478e8d230d8'
 
 export const INIT_CODE_HASH_BY_CHAINID: AddressMap = {
   137: INIT_CODE_HASH,
@@ -24,7 +25,7 @@ export const INIT_CODE_HASH_BY_CHAINID: AddressMap = {
   80002: NEW_INIT_CODE_HASH,
   84532: NEW_INIT_CODE_HASH,
   8453: NEW_INIT_CODE_HASH,
-  153: NEW_INIT_CODE_HASH,
+  153: REDBELLY_INIT_CODE_HASH,
   1: INIT_CODE_HASH,
   3: INIT_CODE_HASH
 }
